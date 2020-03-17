@@ -1,7 +1,6 @@
 import React from "react";
 import Table from "./Table";
 import List from "./List";
-/*Add import statement here*/
 
 class App extends React.Component {
   constructor(props) {
@@ -9,8 +8,8 @@ class App extends React.Component {
 
     this.state = {
       buttonClicked: "",
+      assignments: [], /*Below this line, add the students state variable*/
       students: [],
-      assignments: [] /*Below this line, add the students state variable*/,
       grades: {}
     };
 
@@ -39,7 +38,9 @@ addStudent(studentName){
   this.setState({
   students: this.state.students.concat(studentName)
 });
-  addGrade(assignment, student, score); {
+
+}
+  addGrade(assignment, student, score){
     let grades = this.state.grades;
     let assignmentName = assignment;
     let studentName = student;
@@ -50,7 +51,7 @@ addStudent(studentName){
     this.setState({ grades: grades });
   }
 
-  render() ;{
+  render(){
     let tabChoice = <div />;
 
     /*Uncomment below to render assignments*/
@@ -124,5 +125,5 @@ addStudent(studentName){
     );
   }
 }
-}
+
 export default App;
