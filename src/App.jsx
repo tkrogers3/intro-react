@@ -53,7 +53,7 @@ addStudent(studentName){
     let tabChoice = <div />;
 
     /*Uncomment below to render assignments*/
-    /*if (this.state.buttonClicked === "assignments") {
+    if (this.state.buttonClicked === "assignments") {
       tabChoice = (
         <List
           placeholder="Add Assignment..."
@@ -62,16 +62,16 @@ addStudent(studentName){
           title="Assignments"
         />
       );
-    }*/
+    }
 
     /* Change below to render students*/
 
-    /*if (this.state.buttonClicked === "students") {
+    if (this.state.buttonClicked === "students") {
       tabChoice = (
         <List
-          placeholder="Add Assignment..." 
-          currList={this.state.assignments}
-          addFunction={this.addAssignment}
+          placeholder="Add Student" 
+          currList={this.state.students}
+          addFunction={this.addStudent}
           title="Student Roster"
         />
       );
