@@ -28,7 +28,8 @@ class App extends React.Component {
   /*Check out this addAssignment method*/
   addAssignment(assignmentName) {
     this.setState({
-     {this.props.title}
+    <p className="h2"> {this.props.title}</p>
+                 
     });
   }
 
