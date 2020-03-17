@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "./Table";
+import List from "./List";
 /*Add import statement here*/
 
 class App extends React.Component {
@@ -38,7 +39,7 @@ addStudent(studentName){
   this.setState({
   students: this.state.students.concat(studentName)
 });
-  addGrade(assignment, student, score) {
+  addGrade(assignment, student, score); {
     let grades = this.state.grades;
     let assignmentName = assignment;
     let studentName = student;
@@ -49,7 +50,7 @@ addStudent(studentName){
     this.setState({ grades: grades });
   }
 
-  render() {
+  render() ;{
     let tabChoice = <div />;
 
     /*Uncomment below to render assignments*/
@@ -69,16 +70,16 @@ addStudent(studentName){
     if (this.state.buttonClicked === "students") {
       tabChoice = (
         <List
-          placeholder="Add Student" 
+          placeholder="Add Student..." 
           currList={this.state.students}
           addFunction={this.addStudent}
           title="Student Roster"
         />
       );
-    }*/
+    }
 
     /* Uncomment lines below to render grades*/
-    /*if (this.state.buttonClicked === "grades") {
+    if (this.state.buttonClicked === "grades") {
       tabChoice = (
         <Table
           tableNames={this.state.assignments}
@@ -87,7 +88,7 @@ addStudent(studentName){
           data={this.state.grades}
         />
       );
-    }*/
+    }
 
     return (
       <div>
@@ -123,5 +124,5 @@ addStudent(studentName){
     );
   }
 }
-
+}
 export default App;
